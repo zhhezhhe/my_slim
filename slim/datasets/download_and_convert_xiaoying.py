@@ -188,6 +188,8 @@ def run(dataset_dir):
   # dataset_utils.download_and_uncompress_tarball(_DATA_URL, dataset_dir)
   photo_filenames, class_names = _get_filenames_and_classes(dataset_dir)
   class_names_to_ids = dict(zip(class_names, range(len(class_names))))
+  print(len(class_names))
+  exit()
 
   # Divide into train and test:
   random.seed(_RANDOM_SEED)
