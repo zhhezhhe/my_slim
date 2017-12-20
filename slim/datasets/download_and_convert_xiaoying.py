@@ -187,7 +187,20 @@ def run(dataset_dir):
 
   # dataset_utils.download_and_uncompress_tarball(_DATA_URL, dataset_dir)
   photo_filenames, class_names = _get_filenames_and_classes(dataset_dir)
-  class_names_to_ids = dict(zip(class_names, range(len(class_names))))
+  # class_names_to_ids = dict(zip(class_names, range(len(class_names))))
+
+  class_names_to_ids = {
+    'football_field': 0,
+    'beach': 1,
+    'badminton_court': 2,
+    'snow': 3,
+    'ward': 4,
+    'basketball_court':5,
+    'golf_course':6,
+    'ice_rink':7,
+    'pool':8,
+    'classroom':9
+  }
 
   # Divide into train and test:
   random.seed(_RANDOM_SEED)
@@ -202,7 +215,20 @@ def run(dataset_dir):
                    dataset_dir)
 
   # Finally, write the labels file:
-  labels_to_class_names = dict(zip(range(len(class_names)), class_names))
+  # labels_to_class_names = dict(zip(range(len(class_names)), class_names))
+  labels_to_class_names = {
+    0:'football_field',
+    1:'beach',
+    2:'badminton_court',
+    3:'snow',
+    4:'ward',
+    5:'basketball_court',
+    6:'golf_course',
+    7:'ice_rink',
+    8:'pool',
+    9:'classroom'
+  }
+
   dataset_utils.write_label_file(labels_to_class_names, dataset_dir)
 
   # _clean_up_temporary_files(dataset_dir)
