@@ -189,17 +189,27 @@ def run(dataset_dir):
   photo_filenames, class_names = _get_filenames_and_classes(dataset_dir)
   # class_names_to_ids = dict(zip(class_names, range(len(class_names))))
 
+  # class_names_to_ids = {
+  #   'football_field': 0,
+  #   'beach': 1,
+  #   'badminton_court': 2,
+  #   'snow': 3,
+  #   'ward': 4,
+  #   'basketball_court':5,
+  #   'golf_course':6,
+  #   'ice_rink':7,
+  #   'pool':8,
+  #   'classroom':9
+  # }
   class_names_to_ids = {
-    'football_field': 0,
-    'beach': 1,
-    'badminton_court': 2,
-    'snow': 3,
-    'ward': 4,
-    'basketball_court':5,
-    'golf_course':6,
-    'ice_rink':7,
-    'pool':8,
-    'classroom':9
+    "bottle":0,
+    "bus":1,
+    "couch":2,
+    "microwave":3,
+    "pizza":4,
+    "racket":5,
+    "suitcase":6,
+    "zebra":7
   }
 
   # Divide into train and test:

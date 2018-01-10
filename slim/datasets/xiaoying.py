@@ -33,11 +33,11 @@ _FILE_PATTERN = 'xiaoying_%s_*.tfrecord'
 
 SPLITS_TO_SIZES = {'train': 3320, 'validation': 350}
 
-_NUM_CLASSES = 10
+_NUM_CLASSES = 8
 
 _ITEMS_TO_DESCRIPTIONS = {
     'image': 'A color image of varying size.',
-    'label': 'A single integer between 0 and 11',
+    'label': 'A single integer between 0 and 7',
 }
 
 
