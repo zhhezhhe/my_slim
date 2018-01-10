@@ -226,17 +226,27 @@ def run(dataset_dir):
 
   # Finally, write the labels file:
   # labels_to_class_names = dict(zip(range(len(class_names)), class_names))
+  # labels_to_class_names = {
+  #   0:'football_field',
+  #   1:'beach',
+  #   2:'badminton_court',
+  #   3:'snow',
+  #   4:'ward',
+  #   5:'basketball_court',
+  #   6:'golf_course',
+  #   7:'ice_rink',
+  #   8:'pool',
+  #   9:'classroom'
+  # }
   labels_to_class_names = {
-    0:'football_field',
-    1:'beach',
-    2:'badminton_court',
-    3:'snow',
-    4:'ward',
-    5:'basketball_court',
-    6:'golf_course',
-    7:'ice_rink',
-    8:'pool',
-    9:'classroom'
+    0: "bottle",
+    1: "bus",
+    2: "couch",
+    3: "microwave",
+    4: "pizza",
+    5: "racket",
+    6: "suitcase",
+    7: "zebra"
   }
 
   dataset_utils.write_label_file(labels_to_class_names, dataset_dir)
